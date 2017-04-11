@@ -1,8 +1,10 @@
 package com.springboot.model;
 
+import java.util.List;
+
 public class Order {
     private int orderId;
-    private CartItemPrice[] cartItemPrices;
+    private List<CartItemPrice> cartItemPrices;
     private double sum;
     private double save;
 
@@ -14,11 +16,11 @@ public class Order {
         this.orderId = orderId;
     }
 
-    public CartItemPrice[] getCartItemPrices() {
+    public List<CartItemPrice> getCartItemPrices() {
         return cartItemPrices;
     }
 
-    public void setCartItemPrices(CartItemPrice[] cartItemPrices) {
+    public void setCartItemPrices(List<CartItemPrice> cartItemPrices) {
         this.cartItemPrices = cartItemPrices;
     }
 
@@ -38,7 +40,8 @@ public class Order {
         this.save = save;
     }
 
-    public Order(CartItemPrice[] cartItemPrice, double sum, double save) {
+    public Order(int orderId, List<CartItemPrice> cartItemPrice, double sum, double save) {
+        this.orderId = orderId;
         this.cartItemPrices = cartItemPrice;
         this.sum = sum;
         this.save = save;

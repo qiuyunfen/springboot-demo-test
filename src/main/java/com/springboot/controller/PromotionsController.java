@@ -16,8 +16,8 @@ public class PromotionsController {
     PromotionService promotionService = new PromotionService();
     @GET
     @Produces(MediaType.APPLICATION_JSON)
+    //http://localhost:8080/promotions?barcodes=ITEM000000&barcodes=ITEM000001
     public Map<String, String> loadPromotionByBarcode(@QueryParam("barcodes") List<String> barcodes) {
-        System.out.print(barcodes);
         Map<String, String> promotions= promotionService.loadPromotionByBarcode(barcodes);
         return promotions;
     }
