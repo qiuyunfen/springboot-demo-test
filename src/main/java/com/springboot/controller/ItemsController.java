@@ -10,7 +10,7 @@ import javax.ws.rs.core.MediaType;
 import java.util.HashMap;
 import java.util.Map;
 
-@Path("Items")
+@Path("items")
 public class ItemsController {
     ItemService itemService = new ItemService();
 

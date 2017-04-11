@@ -1,13 +1,12 @@
 package com.springboot.dao;
 
+
 import com.springboot.model.Item;
 
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Created by qiuyf on 17-4-11.
- */
+
 public class ItemDao {
     public Map<String, Item> loadAllItems() {
         Map<String, Item> allItems = new HashMap<String, Item>();
