@@ -1,9 +1,18 @@
 package com.springboot.model;
 
 public class Order {
+    private int orderId;
     private CartItemPrice[] cartItemPrices;
     private double sum;
     private double save;
+
+    public int getOrderId() {
+        return orderId;
+    }
+
+    public void setOrderId(int orderId) {
+        this.orderId = orderId;
+    }
 
     public CartItemPrice[] getCartItemPrices() {
         return cartItemPrices;
