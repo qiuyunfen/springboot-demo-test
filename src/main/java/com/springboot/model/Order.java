@@ -1,16 +1,16 @@
 package com.springboot.model;
 
 public class Order {
-    private CartItemPrice cartItemPrice;
+    private CartItemPrice[] cartItemPrices;
     private double sum;
     private double save;
 
-    public CartItemPrice getCartItemPrice() {
-        return cartItemPrice;
+    public CartItemPrice[] getCartItemPrices() {
+        return cartItemPrices;
     }
 
-    public void setCartItemPrice(CartItemPrice cartItemPrice) {
-        this.cartItemPrice = cartItemPrice;
+    public void setCartItemPrices(CartItemPrice[] cartItemPrices) {
+        this.cartItemPrices = cartItemPrices;
     }
 
     public double getSum() {
@@ -29,8 +29,8 @@ public class Order {
         this.save = save;
     }
 
-    public Order(CartItemPrice cartItemPrice, double sum, double save) {
-        this.cartItemPrice = cartItemPrice;
+    public Order(CartItemPrice[] cartItemPrice, double sum, double save) {
+        this.cartItemPrices = cartItemPrice;
         this.sum = sum;
         this.save = save;
     }
