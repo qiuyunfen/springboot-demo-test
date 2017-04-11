@@ -1,0 +1,46 @@
+buildscript {
+	ext {
+		springBootVersion = '1.5.2.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+}
+
+//test {
+//	exclude '**/*IntegrationTest*'
+//}
+//
+//task integrationTest(type: Test) {
+//	include '**/*IntegrationTest*'
+//	doFirst {
+//		jettyRun.contextPath = '/';
+//		jettyRun.httpPort = 8080    // Port for test
+//		jettyRun.daemon = true
+//		jettyRun.execute()
+//	}
+//	doLast {
+//		jettyStop.stopPort = 8091   // Port for stop signal
+//		jettyStop.stopKey = 'stopKey'
+//		jettyStop.execute()
+//	}
+//}
+dependencies {
+	compile('org.springframework.boot:spring-boot-starter-jersey')
+	compile('org.springframework.boot:spring-boot-starter-web')
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+}
